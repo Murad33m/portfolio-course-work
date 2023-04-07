@@ -27,11 +27,49 @@ padding-right: 5px;
   .header {
     padding: 41px 40px 0;
   }
-  .nav-links{
+   header .nav-links{
     display: none;
   }
-
-  .fa-bars {
+.fa-bars {
     display: flex !important;
   }
 }
+ /* OVERLAY MENUNUN YARADILMASI */
+ .overlay {
+  background-color: rgba(0,0,0,.8);
+  height: 100vh;
+   position: fixed; /*arxa fonu gorsedir */
+   width: 0;
+   overflow-x: hidden; /*surusmenin qarsisin alir*/
+
+ }
+ .overlay .nav-links {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+ }
+  
+
+ .overlay .nav-links a {
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 25px;
+  transition: all 1s ease;  /* gecikme verir */
+ }
+
+ .overlay .nav-links a:hover {
+  color: #fff;
+  transform: translateX(30px); /* saga surumse */
+ }
+  .fa-xmark {
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 45px ;  /* yuxaaridan 45px asagi gel */
+    right: 45px; /* saoldan 54px saga gel */
+  }
+
